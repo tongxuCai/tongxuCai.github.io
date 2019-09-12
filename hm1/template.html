@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <style>
+        body {
+            margin:auto;
+            padding:50px 10px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .serif {
+            font-family: 'Lora', serif;
+        }
+        .sans-serif {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* choose a light or dark theme to add to the body tag. */
+        .dark-theme {
+            background-color: #151515;
+            color: #fbfbfb;
+        }
+        .light-theme {
+            background-color: white;
+            color: black;
+        }
+
+        .header {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .story-body, .header, .chart-section, .footer {
+            margin:auto;
+            max-width: 700px;
+        }
+
+        .footer {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .chart-section.wide{
+            width:100%;
+            max-width:1200px;
+        }
+
+        .chart-section.wide p.chart-title {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .chart-section.wide p.chart-subhead {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+
+        /* text styles */
+
+        p.kicker {
+            font-size:1rem;
+            text-transform:uppercase;
+        }
+
+        .text-center {
+            text-align:center;
+        }
+
+        h1.headline {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 0.25rem;
+            margin-top: 1rem;
+            font-weight: 800;
+        }
+
+        h2.subhead {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            margin-bottom:0;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        p.body-text {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-top:0;
+            margin-bottom:15px;
+        }
+
+        h3.section-head {
+            font-size:2rem;
+            margin:40px 0 10px 0;
+            font-weight:700;
+            line-height:1.3;
+        }
+
+        .byline {
+            font-size: 1.1rem;
+            line-height: 0.75;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            line-height: 1;
+            margin-top: 10px;
+            font-weight:400;
+            text-transform:uppercase;
+            letter-spacing:0.5px;
+        }
+
+
+        p.note {
+            font-size:0.85rem;
+        }
+
+        /* chart styles */
+
+        .chart-section {
+            width:100%;
+            max-width:1200px;
+            padding:20px 0px;
+        }
+
+        .story-body .chart-section {
+            padding-top:0px;
+        }
+
+
+        .chart-row {
+            display:flex;
+            justify-content: space-between;
+            margin-top:20px;
+        }
+
+        p.chart-title {
+            font-size:1.3rem;
+            font-weight:700;
+            max-width:700px;
+            margin:0px auto 5px auto;
+        }
+        p.chart-subhead {
+            margin:0 auto;
+            max-width:700px;
+            font-size:1rem;
+            margin-bottom:15px;
+        }
+
+        p.chart-label {
+            margin:0 0 5px 0;
+            font-size:0.85rem;
+            text-transform:uppercase;
+            font-weight:600;
+        }
+
+        .chart-row .chart {
+            width:100%;
+            padding-right:15px;
+            min-width:calc(25% - 15px);
+
+        }
+
+
+
+        p.chart-source {
+            font-size:0.85rem;
+            margin:0;
+        }
+
+
+
+
+
+        /* photos */
+
+        .photo-section {
+            padding:30px 0px;
+            width:100%;
+            margin:auto;
+            display:flex;
+            max-width:1200px;
+        }
+
+        .photo {
+            width:100%;
+            padding-right:15px;
+        }
+        .photo img {
+            width:100%;	
+        }
+
+        p.caption {
+            font-size:0.9rem;
+            margin:0;
+        }
+
+
+
+        /* mobile */
+
+        @media (max-width:700px) {
+
+            .chart-row {
+                display:block;
+            }
+
+            .chart-row .chart {
+                padding:0;
+            }
+
+            .photo-section {
+                display:block;
+            }
+            .photo {
+                padding:0;
+            }
+
+        }
+
+        #g-templates-laptop, #g-templates-medium, #g-templates-mobile {
+            display: none;
+        }
+
+        @media (max-width: 490px) {
+            #g-templates-mobile {
+                display: block;
+            }
+        }
+
+        @media (min-width: 490px) and (max-width: 620px) {
+            #g-templates-laptop {
+                display: block;
+            }
+        }
+
+        @media (min-width: 620px)  {
+            #g-templates-medium {
+                display: block;
+            }
+        }
+
+    </style>
+    
+    <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+      
+    <title>This is your title</title>
+  </head>
+
+  <body class="light-theme"> <!-- all of the content on your html page goes inside the body -->
+
+    <div class="header">
+      <p class="kicker">Optional kicker</p>
+      <h1 class="headline">Observe China's 2000-2014 foreign aid money flow</h1>
+      <h2 class="subhead">With explanatory highlights</h2>
+      <p class="byline">By FRIDA CAI</p>
+      <p class="date">Published September 9, 2019</p>
+    </div>
+
+    <div class="story-body">
+      <p class="body-text serif"> China has never attempted to shy away from its flaunting financial tanglements with Africa over the past two decades. According to AidData, Chinese government has documented a total of $273.6 billion of projects implemented in Africa from 2000 to 2014. The following graph offers a primary look on the total amount of money invested in foreign aid projects and non-aid projects.</p>
+      
+
+    <div class="chart-section">
+        <div class="chart-row">
+          <div class="chart">
+
+
+
+
+            <!--- PASTE YOUR AI2HTML AFTER THIS LINE --> 
+
+<!-- Generated by ai2html v0.89.0 - 2019-09-08 10:41 -->
+<!-- ai file: Untitled-5.ai -->
+<style type='text/css' media='screen,print'>
+	#g-Untitled-5-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-Untitled-5-box p {
+		margin:0;
+	}
+	.g-aiAbs {
+		position:absolute;
+	}
+	.g-aiImg {
+		display:block;
+		width:100% !important;
+	}
+	.g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	.g-aiPointText p { white-space: nowrap; }
+	#g-Untitled-5-Artboard_1 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Untitled-5-Artboard_1 p {
+		font-weight:500;
+		font-size:8px;
+		line-height:9px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0.025em;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-Untitled-5-Artboard_1 .g-pstyle0 {
+		font-weight:700;
+		font-size:21px;
+		line-height:25px;
+		letter-spacing:0em;
+	}
+	#g-Untitled-5-Artboard_1 .g-pstyle1 {
+		font-size:18px;
+		line-height:21px;
+		letter-spacing:0.01em;
+	}
+	#g-Untitled-5-Artboard_1 .g-pstyle2 {
+		font-size:10px;
+		line-height:12px;
+		height:12px;
+		filter:alpha(opacity=43);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=43);
+		opacity:0.43;
+		letter-spacing:0em;
+		color:rgb(82,82,82);
+	}
+	#g-Untitled-5-Artboard_1 .g-pstyle3 {
+		text-align:right;
+	}
+	#g-Untitled-5-Artboard_1 .g-pstyle4 {
+		font-weight:700;
+		font-size:18px;
+		line-height:14px;
+		height:14px;
+		color:rgb(30,120,180);
+	}
+	#g-Untitled-5-Artboard_1 .g-pstyle5 {
+		font-weight:700;
+		font-size:18px;
+		line-height:14px;
+		height:14px;
+		color:rgb(99,222,222);
+	}
+	#g-Untitled-5-Artboard_1 .g-pstyle6 {
+		font-size:10px;
+		line-height:12px;
+		height:12px;
+		filter:alpha(opacity=43);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=43);
+		opacity:0.43;
+		color:rgb(82,82,82);
+	}
+	#g-Untitled-5-Artboard_1 .g-pstyle7 {
+		font-size:7px;
+		line-height:8px;
+		letter-spacing:0em;
+	}
+	#g-Untitled-5-Artboard_1 .g-cstyle0 {
+		color:rgb(30,120,180);
+	}
+	#g-Untitled-5-Artboard_1 .g-cstyle1 {
+		color:rgb(99,222,222);
+	}
+
+</style>
+
+<div id="g-Untitled-5-box" class="ai2html">
+
+	<!-- Artboard: Artboard_1 -->
+	<div id="g-Untitled-5-Artboard_1" class="g-artboard" style="width:514px; height:400px;" data-aspect-ratio="1.285" data-min-width="514">
+		<img id="g-Untitled-5-Artboard_1-img" class="g-aiImg g-aiAbs" alt="" src="Untitled-5-Artboard_1.png"/>
+		<div id="g-ai0-1" class="g-Layer_1 g-aiAbs" style="top:4.25%;left:10.8355%;width:94.5525%;">
+			<p class="g-pstyle0">2000 - 2014 China&rsquo;s Foreign Aid Money Flow  </p>
+		</div>
+		<div id="g-ai0-2" class="g-Layer_1 g-aiAbs" style="top:11.25%;left:10.8355%;width:82.8794%;">
+			<p class="g-pstyle1"><span class="g-cstyle0">Aid</span> v. <span class="g-cstyle1">Non-aid</span> projects </p>
+		</div>
+		<div id="g-ai0-3" class="g-Layer_1 g-aiAbs" style="top:21.25%;left:78.7245%;width:15.7588%;">
+			<p>In 2014, the government formed a political committee of its Belt and Road Initiative.</p>
+		</div>
+		<div id="g-ai0-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:25.6088%;margin-top:-6.4px;left:2.1686%;width:71px;">
+			<p class="g-pstyle2">$400 billion</p>
+		</div>
+		<div id="g-ai0-5" class="g-Layer_1 g-aiAbs" style="top:26.5%;right:65.1116%;width:18.8716%;">
+			<p class="g-pstyle3">Since China&rsquo;s &ldquo;2005 Go Global&rdquo; strategy, its foreign aid totals have grown at an average annual rate of 21.8%.</p>
+		</div>
+		<div id="g-ai0-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:37.5168%;margin-top:-10.1px;left:78.6002%;width:53px;">
+			<p class="g-pstyle4">Aid</p>
+		</div>
+		<div id="g-ai0-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:37.3588%;margin-top:-6.4px;left:8.6625%;width:37px;">
+			<p class="g-pstyle2">300</p>
+		</div>
+		<div id="g-ai0-8" class="g-Layer_1 g-aiAbs" style="top:38.25%;right:27.462%;width:20.0389%;">
+			<p class="g-pstyle3">In 2013, China has contributed to 3.9% to total global development assistance, which is over 26% of U.S. foreign aid.</p>
+		</div>
+		<div id="g-ai0-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:49.3588%;margin-top:-6.4px;left:8.6625%;width:37px;">
+			<p class="g-pstyle2">200</p>
+		</div>
+		<div id="g-ai0-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:61.1088%;margin-top:-6.4px;left:8.6625%;width:37px;">
+			<p class="g-pstyle2">100</p>
+		</div>
+		<div id="g-ai0-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:65.0168%;margin-top:-10.1px;left:78.6%;width:94px;">
+			<p class="g-pstyle5">Non-aid</p>
+		</div>
+		<div id="g-ai0-12" class="g-Layer_1 g-aiAbs" style="top:62.25%;left:50.5781%;width:17.3152%;">
+			<p>A 7.9-M Sichuan Earthquake, Tibetan riots, Beijing Olympics, flooding, snow storms, landslides, etc. </p>
+		</div>
+		<div id="g-ai0-13" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:72.8588%;margin-top:-6.4px;left:10.61%;width:27px;">
+			<p class="g-pstyle6">0</p>
+		</div>
+		<div id="g-ai0-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:77.6088%;margin-top:-6.4px;left:10.2151%;width:43px;">
+			<p class="g-pstyle2">2000</p>
+		</div>
+		<div id="g-ai0-15" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:77.6088%;margin-top:-6.4px;left:19.5203%;width:43px;">
+			<p class="g-pstyle2">2002</p>
+		</div>
+		<div id="g-ai0-16" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:77.6088%;margin-top:-6.4px;left:28.8255%;width:43px;">
+			<p class="g-pstyle2">2004</p>
+		</div>
+		<div id="g-ai0-17" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:77.6088%;margin-top:-6.4px;left:38.1307%;width:43px;">
+			<p class="g-pstyle2">2006</p>
+		</div>
+		<div id="g-ai0-18" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:77.6088%;margin-top:-6.4px;left:47.4359%;width:43px;">
+			<p class="g-pstyle2">2008</p>
+		</div>
+		<div id="g-ai0-19" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:77.6088%;margin-top:-6.4px;left:56.7409%;width:43px;">
+			<p class="g-pstyle2">2010</p>
+		</div>
+		<div id="g-ai0-20" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:77.6088%;margin-top:-6.4px;left:66.0462%;width:43px;">
+			<p class="g-pstyle2">2012</p>
+		</div>
+		<div id="g-ai0-21" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:77.6088%;margin-top:-6.4px;left:75.3513%;width:43px;">
+			<p class="g-pstyle2">2014</p>
+		</div>
+		<div id="g-ai0-22" class="g-Layer_1 g-aiAbs" style="top:88.25%;left:10.5495%;width:43.3852%;">
+			<p class="g-pstyle7">Note: China doesn&rsquo;t participate in global aid reporting systems.</p>
+		</div>
+		<div id="g-ai0-23" class="g-Layer_1 g-aiAbs" style="top:90.75%;left:10.5495%;width:65.1751%;">
+			<p class="g-pstyle7">Sources: </p>
+			<p class="g-pstyle7">https://www.brookings.edu/blog/order-from-chaos/2016/07/19/chinese-foreign-assistance-explained/</p>
+			<p class="g-pstyle7">https://www.apnews.com/5f816fec396a463cb3c130e1ec44c58f</p>
+			<p>&nbsp;</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2019-09-08 10:41 -->
+
+
+
+
+
+        </div>
+        </div>
+    </div>
+
+    <div class="story-body">
+        <p class="body-text serif">Unexpectedly, the graph does not prove a preconceived increasing line. Instead, the line experiences hills and downs. Complicated factors and extensive background have to be provided to read pivoting state decisions. Nonetheless given the limited scope of this page, I mark a few major turning points and general stimulus.</p>
+
+        <p class="body-text serif">It is still early to conclude China as an equal participant to the United States in terms of aids in Africa. China spent 12 years to grow from its 1.8 percent to global assistance development to 3.9 percent. However, the number could be ungrounded since China does not participate in any international aid reporting systems. I hope to track more data that could draw a fuller and more up-to-date picture of China's assistance money flows in Africa. 
+        </p>
+    </div>
+      
+  </body>
+</html>
